@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+build/
+dist/
+.sel-experiments.json
+sel-prompt.txt
+sel-launch.py
+sel-codex.log
+*-codex.log
+*-prompt.txt
+*-launch.py
+demo/
