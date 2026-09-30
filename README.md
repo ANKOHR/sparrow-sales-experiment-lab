@@ -21,6 +21,10 @@ sel niches --store demo/experiments.json
 sel report --store demo/experiments.json --experiment clear-winner --format md --out demo/report.md
 ```
 
+If Windows installs `sel.exe` in a Scripts directory outside PATH, use
+`python -m sel` in place of `sel`, or add the Scripts directory printed by pip
+to PATH.
+
 These first three inspection commands form the two-minute demo: the thin-data
 experiment is INCONCLUSIVE because its sample is too small; clear-winner declares
 B; the niche table ranks measured rates and flags thin data. Every fixture result

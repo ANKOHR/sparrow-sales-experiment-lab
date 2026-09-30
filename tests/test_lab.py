@@ -67,6 +67,16 @@ def test_duplicate_entry_rejected(store):
     assert store.read_bytes() == before
 
 
+def test_replies_greater_than_sent_rejected(store):
+    with pytest.raises(InvalidResultError):
+        log_result('clear-winner', 'a', 10, 11, path=store)
+
+
+def test_zero_sent_rejected(store):
+    with pytest.raises(InvalidResultError):
+        log_result('clear-winner', 'a', 0, 0, path=store)
+
+
 def test_min_n_below_10_rejected(tmp_path, capsys):
     with pytest.raises(MinSampleTooSmallError):
         register('test', 'a', 'b', 'niche', 5, tmp_path / 'bad.json')
